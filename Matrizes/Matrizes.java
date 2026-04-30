@@ -1,42 +1,33 @@
 import java.util.Scanner;
 
 class Matrizes{
-  public static Scanner input = new Scanner(System.in);
-  public static int[][] m = new int[3][4];
+    public static Scanner input = new Scanner(System.in);
+    public static int[][] m = new int[3][4];
 
-  public static void main(String[] args){
-    inserirImprimirDados();
-    menorMatriz(m);
-  }
-  
-  public static void inserirImprimirDados(){
-    for(int i = 0; i < m.length; i += 1){
-      for(int j = 0; j < m[0].length; j++){
-        System.out.printf("Digite a %dº linha / %dº valor : ", i+1, j+1);
-        m[i][j] = input.nextInt();
-        // m[2][1] = 55;
-      }
+    public static void main(String[] args){
+        inserirImprimirDados();
+        //menorMatriz(m);
     }
 
-    for(int i = 0; i < m.length; i += 1){
-      for(int j = 0; j < m[0].length; j += 1){
-        System.out.print(m[i][j] + " ");        
-      }
-      System.out.print("\n");
-      }
-    }  
-    
-    public static int menorMatriz(int[][] m){
-      
-      int menor = Integer.MAX_VALUE;
-      
-      for(int i = 0; i < m.length; i++){
-        for(int j = 0; j < m[0].length; i++){
-          if(m[i][j] < menor){
-            menor = m[i][j];
-          }
+    public static void inserirImprimirDados(){
+
+        for(int i = 0; i < m.length; i += 1){
+            for(int j = 0; j < m[0].length; j++){
+                System.out.printf("Digite a %dº linha / %dº valor : ", i+1, j+1);
+                m[i][j] = input.nextInt();
+                System.out.println("\n");
+                // m[2][1] = 55;
+            }
         }
-      }
-      return menor;
+
+        for(int i = 0; i < m.length; i += 1){
+
+            for(int j = 0; j < m[0].length; j += 1){
+                System.out.print(m[i][j] + " ");        
+            }
+
+            System.out.print("\n");
+
+        }
     }
 }
